@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+		<html lang="en">
+		<head>
+    		<meta charset="UTF-8">
+    		<title>База Данных стипендиатов</title>
+		</head>
+		<body style="background-color:powderblue;">
+
+        <style>
+            header{background-color:white;}
+            h3{text-align:right;}
+
+
+        </style>
+        <header>
+            <h1>Стипендиаты INAI.KG</h1><a href="https://inai.kg/"><button><h1>Main Website</h1></button></a> <a href="http://127.0.0.1:8000/data/"><button><h1>Список</h1></button></a>  <h3>Contacts</h3> <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Finai.kg%2Fogassets%2Fog-image.jpg&f=1&nofb=1&ipt=b3a45056c6bb49c42fef8fa79149ec728cfc8dc4da31188ac4ea1291b72dab68&ipo=images" width="200" height="200" alt="" >
+        </header>
+<style>
+    p{text-align: center;}
+    h2{text-align: center;}
+    div {
+      text-align: center;
+    }
+</style>
+<div>
+    <ul>
+        {% for i in post %}
+
+                <h2>{{ i.title }}</h2>
+
+                <p>{{ i.description }}</p>
+                <img src=" {{ i.image.url }}" width="300" height="300" alt="">
+                <p>{{ i.created_date }}</p>
+                <p>{{ i.updated_date }}</p>
+
+        {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>
+

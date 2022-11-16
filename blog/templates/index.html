@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<header>
+  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Finai.kg%2Fogassets%2Fog-image.jpg&f=1&nofb=1&ipt=b3a45056c6bb49c42fef8fa79149ec728cfc8dc4da31188ac4ea1291b72dab68&ipo=images" width="100" height="100">
+<a href="http://127.0.0.1:8000/admin/login/?next=/admin/"><button><h2>Admin site</h2></button></a>
+</header>
+<h2>Список стипендиатов</h2>
+
+<div class="container">
+  <h2 class="text-center"><u>Список</u></h2><br>
+  <table class="table table-dark table-striped">
+    <thead>
+      <tr>
+
+        <th>Имя</th>
+        <th>Фамилия</th>
+        <th>Средний балл</th>
+        <th>Группа</th>
+
+      </tr>
+    </thead>
+    <tbody>
+    <!-- jinja2 Technique -->
+    {% if data %}
+    {% for i in data %}
+      <tr>
+
+        <td>{{i.name}}</td>
+        <td>{{i.surname}}</td>
+        <td>{{i.point}}</td>
+        <td>{{i.group}}</td>
+
+      </tr>
+    {% endfor %}
+    {% endif %}
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+
