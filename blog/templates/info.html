@@ -23,17 +23,12 @@ tr:nth-child(even) {
 <!--  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Finai.kg%2Fogassets%2Fog-image.jpg&f=1&nofb=1&ipt=b3a45056c6bb49c42fef8fa79149ec728cfc8dc4da31188ac4ea1291b72dab68&ipo=images" width="100" height="100">-->
 <!--<a href="http://127.0.0.1:8000/admin/login/?next=/admin/"><button><h2>Admin site</h2></button></a>-->
 <!--</header>-->
-<div>
-    <ul>
-        {% for i in data %}
-                <p>{{i.name}}</p>
-                <p>{{i.surname}}</p>
-                <p>{{i.group}}</p>
-
-                <img src=" {{ i.image.url }}" width="300" height="300" alt="">
-        {% endfor %}
-    </ul>
-</div>
+<center>
+  <img src="{{data.image.url}}" alt="" width="200" height="200">
+  <h1><b>Имя</b> - {{data.name}}</h1>
+  <p><b>Фамилия</b> - {{data.surname}}</p>
+  <p><b>Группа</b> - <i>{{data.group}}</i></p>
+</center>
 
 <div class="container">
   <h2 class="text-center"><u>Табель</u></h2><br>

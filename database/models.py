@@ -10,3 +10,10 @@ class Student(models.Model):
     point = models.CharField(max_length=50, null=True)
     group = models.CharField(max_length=100, null=True)
 
+class Tabel(models.Model):
+    subject = models.CharField(max_length=50, null=True)
+    semestr1 = models.CharField(max_length=50, null=True)
+    semestr2 = models.CharField(max_length=50, null=True)
+    average = models.CharField(max_length=50, null=True)
+
+
